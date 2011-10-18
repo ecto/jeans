@@ -29,15 +29,25 @@ jeans.set('holding', [
 ````
 
 ````javascript
+var port;
+
 jeans.env('production');
 
 jeans.set('port', 80);
 
-var port = jeans.get('port'); // 80
+port = jeans.get('port'); // 80
 
 jeans.env('development');
 
-var port = jeans.get('port'); // undefined
+port = jeans.get('port'); // undefined
+
+port = jeans.get('port', 8080); // 8080
+
+port = jeans.get('port'); // undefined
+
+jeans.env('production');
+
+port = jeans.get('port'); // 80
 ````
 
 ````javascript
