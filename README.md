@@ -26,6 +26,10 @@ jeans.set('holding', [
   'receipt',
   'cash'
 ]);
+
+console.log(jeans.get('holding'));
+
+// ['pen', 'receipt', 'cash']
 ````
 
 ````javascript
@@ -51,13 +55,9 @@ port = jeans.get('port'); // 80
 ````
 
 ````javascript
-console.log(jeans.holding);
-
-// ['pen', 'receipt', 'cash']
-````
-
-````javascript
 jeans.env('production');
+
+jeans.clean();
 
 jeans.set('holding', {
   pen: 1,
