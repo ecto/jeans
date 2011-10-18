@@ -68,13 +68,7 @@ jeans.set('holding', {
 
 ````bash
 $ cat config/production.json
-{
-    "holding": {
-      "pen": 1,
-      "receipts": 10,
-      "money": 0
-    }
-}
+{"holding":{"pen":1,"receipts":10,"money":0}} 
 ````
 
 # license
