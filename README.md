@@ -17,7 +17,7 @@ var jeans = require('jeans');
 
 jeans.set('pockets', 4);
 
-var pockets = jeans.get('pockets');
+var pockets = jeans.get('pockets'); // 4
 ````
 
 ````javascript
