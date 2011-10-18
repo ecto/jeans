@@ -3,4 +3,4 @@
  * cam@onswipe.com
  */
 
-module.exports = require('lib/jeans.js');
+module.exports = require('./lib/jeans.js');
