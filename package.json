@@ -12,7 +12,7 @@
     "test": "vows --spec test/*"
   },
   "engines": {
-    "node": "~v0.4.10"
+    "node": "*"
   },
   "dependencies": {},
   "devDependencies": {}
