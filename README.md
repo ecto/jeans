@@ -7,45 +7,36 @@ Easy, opinionated configuration API for node.js
 # install
 
 ````bash
-
 npm install jeans
-
 ````
 
 # usage
 
 ````javascript
-
 var jeans = require('jeans');
 
 jeans.set('pockets', 4);
 
 var pockets = jeans.get('pockets');
-
 ````
 
 ````javascript
-
 jeans.set('holding', {
   pen: 1,
   receipts: 10,
   money: 0
 });
-
 ````
 
 ````javascript
-
 jeans.set('holding', [
   'pen',
   'receipt',
   'cash'
 ]);
-
 ````
 
 ````javascript
-
 jeans.env('production');
 
 jeans.set('port', 80);
@@ -53,7 +44,6 @@ jeans.set('port', 80);
 var port = jeans.get('port');
 
 jeans.env('development');
-
 ````
 
 # license
