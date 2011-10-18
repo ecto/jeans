@@ -7,7 +7,7 @@ Easy, opinionated configuration API for node.js
 # install
 
 ````bash
-npm install jeans
+$ npm install jeans
 ````
 
 # usage
@@ -18,14 +18,6 @@ var jeans = require('jeans');
 jeans.set('pockets', 4);
 
 var pockets = jeans.get('pockets');
-````
-
-````javascript
-jeans.set('holding', {
-  pen: 1,
-  receipts: 10,
-  money: 0
-});
 ````
 
 ````javascript
@@ -41,9 +33,38 @@ jeans.env('production');
 
 jeans.set('port', 80);
 
-var port = jeans.get('port');
+var port = jeans.get('port'); // 80
 
 jeans.env('development');
+
+var port = jeans.get('port'); // undefined
+````
+
+````javascript
+console.log(jeans.holding);
+
+// ['pen', 'receipt', 'cash']
+````
+
+````javascript
+jeans.env('production');
+
+jeans.set('holding', {
+  pen: 1,
+  receipts: 10,
+  money: 0
+});
+````
+
+````bash
+$ cat config/production.json
+{
+    "holding": {
+      "pen": 1,
+      "receipts": 10,
+      "money": 0
+    }
+}
 ````
 
 # license
